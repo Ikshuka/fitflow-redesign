@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-docs:
+    name: Validate Documentation & Structure
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify repository structure
+        run: |
+          echo "Checking essential folders..."
+          test -d frontend || (echo "frontend/ missing" && exit 1)
+          test -d backend || (echo "backend/ missing" && exit 1)
+          test -d ai-service || (echo "ai-service/ missing" && exit 1)
+          test -d docs || (echo "docs/ missing" && exit 1)
+
+          echo "Checking essential documentation..."
+          test -f docs/frontend-comparison.md || (echo "frontend-comparison.md missing" && exit 1)
+          test -f docs/backend-comparison.md || (echo "backend-comparison.md missing" && exit 1)
+          test -f docs/decision-matrix.md || (echo "decision-matrix.md missing" && exit 1)
+          test -f docs/architecture.md || (echo "architecture.md missing" && exit 1)
+          test -f docs/ADR-001-technology-stack.md || (echo "ADR missing" && exit 1)
+          test -f README.md || (echo "Root README.md missing" && exit 1)
+
+          echo "All structural and documentation checks passed successfully!"
