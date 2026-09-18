@@ -23,12 +23,12 @@ jobs:
           test -d ai-service || (echo "ai-service/ missing" && exit 1)
           test -d docs || (echo "docs/ missing" && exit 1)
 
-          echo "Checking essential documentation..."
-          test -f docs/frontend-comparison.md || (echo "frontend-comparison.md missing" && exit 1)
-          test -f docs/backend-comparison.md || (echo "backend-comparison.md missing" && exit 1)
-          test -f docs/decision-matrix.md || (echo "decision-matrix.md missing" && exit 1)
-          test -f docs/architecture.md || (echo "architecture.md missing" && exit 1)
-          test -f docs/ADR-001-technology-stack.md || (echo "ADR missing" && exit 1)
+          echo "Checking essential activity-numbered documentation..."
+          test -f docs/activity-1-frontend-comparison.md || (echo "activity-1-frontend-comparison.md missing" && exit 1)
+          test -f docs/activity-2-backend-comparison.md || (echo "activity-2-backend-comparison.md missing" && exit 1)
+          test -f docs/activity-3-decision-matrix.md || (echo "activity-3-decision-matrix.md missing" && exit 1)
+          test -f docs/activity-4-architecture.md || (echo "activity-4-architecture.md missing" && exit 1)
+          test -f docs/activity-4-ADR-001-technology-stack.md || (echo "activity-4-ADR missing" && exit 1)
           test -f README.md || (echo "Root README.md missing" && exit 1)
 
-          echo "All structural and documentation checks passed successfully!"
+          echo "All activity-numbered structural and documentation checks passed successfully!"

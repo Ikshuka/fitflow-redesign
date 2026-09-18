@@ -1,4 +1,4 @@
-# Architecture Decision Record (ADR)
+# Activity 4 — Architecture Decision Record (ADR)
 
 | Field | Detail |
 | :--- | :--- |

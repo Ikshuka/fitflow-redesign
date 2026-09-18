@@ -45,29 +45,29 @@ This repository contains the complete deliverables for **Lab Exercise 05** for t
 fitflow-redesign/
 ├── .github/
 │   └── workflows/
-│       └── ci.yml                 # CI workflow (docs & lint validation)
-├── frontend/                      # Flutter client application scaffold & README
-├── backend/                       # NestJS microservices scaffold & README
-├── ai-service/                    # FastAPI AI/ML microservice scaffold & README
-├── docs/                          # Comprehensive assignment documentation
-│   ├── README.md                  # Documentation index & summary
-│   ├── frontend-comparison.md     # Activity 1: Frontend evaluation (10 criteria)
-│   ├── backend-comparison.md      # Activity 2: Backend, DB & Auth evaluation
-│   ├── decision-matrix.md         # Activity 3: Weighted scoring decision matrix
-│   ├── architecture.md            # Activity 4: High-level architecture & data flows
-│   └── ADR-001-technology-stack.md# Activity 4: Architecture Decision Record
-├── .gitignore                     # Git exclusion rules
-└── README.md                      # Repository root overview
+│       └── ci.yml                            # CI workflow (docs & structure validation)
+├── frontend/                                 # Activity 5: Flutter client application scaffold
+├── backend/                                  # Activity 5: NestJS microservices scaffold
+├── ai-service/                               # Activity 5: FastAPI AI/ML microservice scaffold
+├── docs/                                     # Assignment Documentation
+│   ├── README.md                             # Documentation index & summary
+│   ├── activity-1-frontend-comparison.md     # Activity 1: Frontend evaluation (10 criteria)
+│   ├── activity-2-backend-comparison.md      # Activity 2: Backend, DB & Auth evaluation
+│   ├── activity-3-decision-matrix.md         # Activity 3: Weighted scoring decision matrix
+│   ├── activity-4-architecture.md            # Activity 4: High-level architecture & data flows
+│   └── activity-4-ADR-001-technology-stack.md# Activity 4: Architecture Decision Record
+├── .gitignore                                # Git exclusion rules
+└── README.md                                 # Activity 5: Repository root overview
 ```
 
 ---
 
-## Documentation Index
+## Documentation Index (By Activity)
 
-| Document | Description |
-| :--- | :--- |
-| [Frontend Comparison](docs/frontend-comparison.md) | 10-criterion comparative evaluation of Flutter, React Native, Kotlin Multiplatform, and Swift/SwiftUI |
-| [Backend, DB & Auth Evaluation](docs/backend-comparison.md) | Comprehensive evaluation of backend engines, relational/NoSQL datastores, and authentication options |
-| [Decision Matrix](docs/decision-matrix.md) | Mathematical weighted decision matrix across 7 operational criteria justifying the chosen stack |
-| [High-Level Architecture](docs/architecture.md) | Visual system architecture diagram (Mermaid), 3 feature data flows, and security/scalability analysis |
-| [ADR-001: Technology Stack](docs/ADR-001-technology-stack.md) | Formal Architecture Decision Record documenting context, decisions, alternatives, and consequences |
+| Activity | Document | Description |
+| :---: | :--- | :--- |
+| **Activity 1** | [activity-1-frontend-comparison.md](docs/activity-1-frontend-comparison.md) | 10-criterion comparative evaluation of Flutter, React Native, Kotlin Multiplatform, and Swift/SwiftUI |
+| **Activity 2** | [activity-2-backend-comparison.md](docs/activity-2-backend-comparison.md) | Comprehensive evaluation of backend engines, relational/NoSQL datastores, and authentication options |
+| **Activity 3** | [activity-3-decision-matrix.md](docs/activity-3-decision-matrix.md) | Mathematical weighted decision matrix across 7 operational criteria justifying the chosen stack |
+| **Activity 4** | [activity-4-architecture.md](docs/activity-4-architecture.md) | Visual system architecture diagram (Mermaid), 3 feature data flows, and security/scalability analysis |
+| **Activity 4** | [activity-4-ADR-001-technology-stack.md](docs/activity-4-ADR-001-technology-stack.md) | Formal Architecture Decision Record documenting context, decisions, alternatives, and consequences |
