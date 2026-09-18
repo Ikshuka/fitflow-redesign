@@ -10,38 +10,38 @@ This document describes the high-level system architecture for the FitFlow redes
 graph TD
     %% Client Layer
     subgraph CLIENT_LAYER ["Client Layer (Flutter Unified Codebase)"]
-        iOS["Flutter iOS App\n(Native Companion/HealthKit)"]
-        Android["Flutter Android App\n(Health Connect)"]
-        Web["Flutter Web\n(PWA / Responsive CanvasKit)"]
-        Watch["Wearable Companion\n(HealthKit / Health Connect)"]
+        iOS["Flutter iOS App<br/>(Native Companion / HealthKit)"]
+        Android["Flutter Android App<br/>(Health Connect)"]
+        Web["Flutter Web<br/>(PWA / CanvasKit)"]
+        Watch["Wearable Companion<br/>(HealthKit / Health Connect)"]
     end
 
     %% Edge / Ingress Layer
     subgraph EDGE_LAYER ["Edge & Ingress Layer"]
-        Gateway["API Gateway (NestJS)\nRate Limiting | CORS | Routing"]
-        Auth0["Auth0 (OIDC / OAuth2)\nJWT Issuance | MFA | Social Login"]
+        Gateway["API Gateway (NestJS)<br/>Rate Limiting | CORS | Routing"]
+        Auth0["Auth0 (OIDC / OAuth2)<br/>JWT Issuance | MFA | Social Login"]
     end
 
     %% Application Microservices Layer
     subgraph APP_LAYER ["Application Services Layer (NestJS / TypeScript)"]
-        UserService["User & Profile Service\nAccount Settings, Privacy"]
-        WorkoutService["Workout Service\nExercise Logs, Plans, Sessions"]
-        SocialService["Social Service\nFeeds, Friends, Challenges"]
-        NutritionService["Nutrition Service\nMeal Logs, Macro Tracking"]
+        UserService["User & Profile Service<br/>Account Settings, Privacy"]
+        WorkoutService["Workout Service<br/>Exercise Logs, Plans, Sessions"]
+        SocialService["Social Service<br/>Feeds, Friends, Challenges"]
+        NutritionService["Nutrition Service<br/>Meal Logs, Macro Tracking"]
     end
 
     %% Real-Time & AI Microservice Layer
     subgraph AI_RT_LAYER ["AI & Real-Time Layer"]
-        AIService["AI/ML Microservice (Python / FastAPI)\nPersonalisation Engine | PyTorch | Scikit-Learn"]
-        RTGateway["Real-Time Gateway (Socket.IO / WebSockets)\nLive Workout Sync | Push Events"]
+        AIService["AI/ML Microservice (Python / FastAPI)<br/>Personalisation Engine | PyTorch | Scikit-Learn"]
+        RTGateway["Real-Time Gateway (Socket.IO / WebSockets)<br/>Live Workout Sync | Push Events"]
     end
 
     %% Data Layer
     subgraph DATA_LAYER ["Data Persistence & Storage Layer"]
-        Postgres[(PostgreSQL Primary)\nAccounts, Encrypted Health Telemetry]
-        Mongo[(MongoDB Secondary)\nSocial Feeds, Activity Stream]
-        Redis[(Redis Cache & Broker)\nSessions, Pub/Sub Leaderboards]
-        S3[(Amazon S3 Storage)\nProgress Photos, Workout Media]
+        Postgres[("PostgreSQL Primary<br/>Accounts, Encrypted Health Telemetry")]
+        Mongo[("MongoDB Secondary<br/>Social Feeds, Activity Stream")]
+        Redis[("Redis Cache & Broker<br/>Sessions, Pub/Sub Leaderboards")]
+        S3[("Amazon S3 Storage<br/>Progress Photos, Workout Media")]
     end
 
     %% Connections
